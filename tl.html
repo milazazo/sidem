@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<head>
+    <title>SideM Translation Masterlist</title>
+</head>
+<style>
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: white; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c2c2c2; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #868686; 
+}
+
+body{
+    background-color: cadetblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+.content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+.filter-box{
+    position: fixed;
+    z-index: 5;
+    background-color: white;
+    width: 100%;
+    height: 11vh;
+    top: 0;
+    left: 0;
+    padding: 1em;
+}
+
+.button-group{
+    display: inline;
+}
+
+.button {
+  appearance: none;
+  background-color: #f1f3f5;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  list-style: none;
+  padding: 0.4em;
+  position: relative;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button:disabled {
+  background-color: #f1f3f5;
+  color: #959DA5;
+  cursor: default;
+}
+
+.button.ischecked {
+  background-color: cadetblue;
+  color: white;
+  transition: none 0s;
+}
+
+.button:focus {
+  outline: 1px transparent;
+}
+
+.button:before {
+  display: none;
+}
+
+.button:-webkit-details-marker {
+  display: none;
+}
+
+#quicksearch {
+  width: 30vw;
+  padding: 0.4em;
+  border: 1px solid #ddd; /* Add a grey border */
+  border-radius: 5px;
+  margin-top: 0.1em;
+}
+
+.wrapper{
+    top: 14vh;
+}
+
+.tl{
+    background-color: white;
+    width: 15%;
+    height: 12vh;
+    overflow-y: auto;
+    padding: 1em;
+    margin: 0.5em;
+    position: relative;
+    float: left;
+    border-radius: 10px;
+}
+
+.tl-header{
+    background-color: cadetblue;
+    padding: 0.8em;
+    border-radius: 10px;
+    color: white;
+    transition: 0.2s;
+}
+
+.tl-header:hover{
+    background-color: rgb(66, 114, 116);
+}
+
+.los .tl-header{
+    background-color: rgb(110, 160, 95);
+}
+
+.los .tl-header:hover{
+    background-color: rgb(85, 112, 76);
+}
+
+
+.tl p{
+    font-size: 0.7em;
+}
+
+.tag{
+    display: inline-block;
+    background-color: aqua;
+    padding: 0.5em;
+    margin: 2px;
+    border-radius: 5px;
+    color: rgb(49, 105, 107);
+    font-size: 0.6em;
+}
+
+.tag-year{
+    background-color: rgb(229 207 207);
+}
+
+.tag-source{
+    background-color: rgb(237 218 202);
+}
+
+.tag-type{
+    background-color: rgb(243 233 200);
+}
+
+.tag-unit{
+    background-color: rgb(213 237 203);
+}
+
+.tag-translator{
+    background-color: rgb(216 235 241);
+}
+
+.voiced{
+    box-shadow: 0 0 10px #fff2c6;
+}
+</style>
+<body>
+    <div class="content">
+        <div class="filter-box">
+        <div class="filters">Source:
+        <div class="button-group" data-filter-group="source">
+            <button class="button is-checked" data-filter=".all-source">All</button>
+            <button class="button" data-filter=".mobage">Mobage</button>
+            <button class="button" data-filter=".los">LIVE ON ST@GE!</button>
+            <button class="button" data-filter=".gs">GROWING STARS</button>
+            <button class="button" data-filter=".other">Other</button>
+        </div>
+        <br>Unit: 
+        <div class="button-group" data-filter-group="unit">
+            <button class="button is-checked" data-filter=".all-unit">All</button>
+            <button class="button" data-filter=".jupiter">Jupiter</button>
+            <button class="button" data-filter=".dramatic-stars">Dramatic Stars</button>
+            <button class="button" data-filter=".altessimo">Altessimo</button>
+            <button class="button" data-filter=".beit">Beit</button>
+            <button class="button" data-filter=".w">W</button>
+            <button class="button" data-filter=".frame">Frame</button>
+            <button class="button" data-filter=".sai">Sai</button>
+            <button class="button" data-filter=".high-x-joker">High×Joker</button>
+            <button class="button" data-filter=".shinsoku-ikkon">Shinsoku Ikkon</button>
+            <button class="button" data-filter=".cafe-parade">Café Parade</button>
+            <button class="button" data-filter=".mofumofuen">Mofumofuen</button>
+            <button class="button" data-filter=".sem">S.E.M</button>
+            <button class="button" data-filter=".the-kogadou">THE Kogadou</button>
+            <button class="button" data-filter=".f-lags">F-LAGS</button>
+            <button class="button" data-filter=".legenders">Legenders</button>
+            <button class="button" data-filter=".cfirst">C.FIRST</button>
+            <button class="button" data-filter=".mixed">Mixed</button>
+          </div>
+          <br>Year: 
+          <div class="button-group" data-filter-group="year">
+            <button class="button is-checked" data-filter=".all-year">All</button>
+            <button class="button" data-filter=".2014">2014</button>
+            <button class="button" data-filter=".2015">2015</button>
+            <button class="button" data-filter=".2016">2016</button>
+            <button class="button" data-filter=".2017">2017</button>
+            <button class="button" data-filter=".2018">2018</button>
+            <button class="button" data-filter=".2019">2019</button>
+          </div>
+        </div>
+        <button class="button" onclick="tsw_demo_change_font_size();">Change font size</button> <input type="text" id="quicksearch" placeholder="Search for title/characters/translator...">
+    </div>
+        <div class="wrapper" id="tl-wrapper"></div>
+        
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.js"></script>
+<script src="tl.js"></script>
+<script>
+    
+</script>
+
+</body>
+</html>
